@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Desenho: Retas, Triângulos, Cor e Espessura</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 16px; background: #fafafa; }
+    h1 { text-align: center; margin: 8px 0 16px; }
+    table { margin: 0 auto; border-collapse: collapse; }
+    td { padding: 8px; vertical-align: top; }
+    canvas { border: 1px solid #333; background: #fff; }
+    .painel {
+      border: 1px solid #ddd; background: #fff; padding: 10px; max-width: 460px;
+      margin: 12px auto; font-size: 14px; line-height: 1.4;
+    }
+    .linha { display:flex; justify-content: space-between; margin-bottom: 6px; }
+    .swatch { display:inline-block; width: 14px; height: 14px; border: 1px solid #0005; vertical-align:-2px; margin-right: 6px; }
+    .kbd { font-family: monospace; background:#eee; border:1px solid #ccc; border-radius:4px; padding:0 4px; }
+    ul { margin: 6px 0 0 18px; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>Galeria de Desenho</h1>
+
+  <div class="painel" id="painel">
+    <div class="linha"><strong>Modo atual:</strong> <span id="modo">Retas</span></div>
+    <div class="linha"><strong>Cor (0–9):</strong> <span><span class="swatch" id="swatch"></span><span id="corNome">0</span></span></div>
+    <div class="linha"><strong>Espessura (1–9):</strong> <span id="esp">2</span>px</div>
+    <hr>
+    <div><strong>Teclas:</strong>
+      <ul>
+        <li><span class="kbd">R</span> Retas | <span class="kbd">T</span> Triângulo</li>
+        <li><span class="kbd">K</span> Modo cor → depois <span class="kbd">0–9</span></li>
+        <li><span class="kbd">E</span> Modo espessura → depois <span class="kbd">1–9</span></li>
+        <li><span class="kbd">C</span> Limpar</li>
+      </ul>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <td>
+        <h3>Canvas</h3>
+        <canvas id="canvas" width="460" height="460"></canvas>
+      </td>
+    </tr>
+  </table>
+
+  <script src="desenho.js"></script>
+</body>
+</html>
