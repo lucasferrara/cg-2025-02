@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeção Perspectiva</title>
+  <style>
+    body { 
+      margin: 20px; 
+      background: #222; 
+      font-family: Arial, sans-serif; 
+      color: #fff;
+      text-align: center;
+    }
+    
+    h1 { 
+      color: #4CAF50; 
+      margin-bottom: 20px;
+    }
+    
+    canvas { 
+      border: 2px solid #4CAF50; 
+      background: #000;
+      margin: 20px 0;
+    }
+    
+    .controls {
+      background: #333;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+      text-align: left;
+      margin: 20px auto;
+    }
+    
+    .controls h3 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+    
+    .controls p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+    
+    .key {
+      background: #555;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-family: monospace;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Projeção Perspectiva 3D</h1>
+  
+  <canvas id="glCanvasCircle" width="800" height="600"></canvas>
+  
+  <div class="controls">
+    <h3>Controles:</h3>
+    <p><span class="key">W/S</span> Frente/Trás</p>
+    <p><span class="key">A/D</span> Esquerda/Direita</p>
+    <p><span class="key">Q/E</span> Baixo/Cima</p>
+    <p><span class="key">← →</span> Rotacionar câmera</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
